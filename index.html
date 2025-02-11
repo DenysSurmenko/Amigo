@@ -135,120 +135,56 @@
         transition: transform 0.3s ease, opacity 0.3s ease; /* Плавна анімація для всіх смужок */
     }
 
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); /* Верхня смужка перетворюється на верхню частину хрестика */
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0; /* Середня смужка зникає */
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px); /* Нижня смужка перетворюється на нижню частину хрестика */
-    }
-
     nav ul {
-        visibility: hidden; /* Сховати меню за замовчуванням */
-        height: 0; /* Висота 0 для анімації */
-        overflow: hidden; /* Сховати переповнене вміст */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #ff6347;
-        width: 100%;
-        text-align: center;
-        opacity: 0; /* Непомітне меню */
-        transform: translateY(-10px); /* Зсув для анімації */
-        transition: visibility 0s 0.5s, opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація */
-    }
-
-    nav ul.active {
-        visibility: visible; /* Показати меню, коли активне */
-        height: auto; /* Автоматична висота */
-        opacity: 1; /* Видиме меню */
-        transform: translateY(0); /* Повертаємо в початкову позицію */
-        transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація без затримки */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Відступи між пунктами меню */
-        text-align: center; /* Центрування пунктів меню */
+        /* Інші стилі */
     }
 
     .header-content h1 {
         font-size: 2.5rem;
-        text-align: center; /* Центрування заголовка */
-    }
-
-    .cta-button {
-        font-size: 1.2rem;
-        padding: 10px 30px;
-        display: block; /* Відображення кнопки блочним елементом */
-        margin: 0 auto; /* Центрування кнопки */
+        text-align: right; /* Вирівнювання заголовка вправо */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 
     .services-block h2 {
         font-size: 2rem;
-        text-align: center; /* Центрування заголовка */
+        text-align: right; /* Вирівнювання заголовка вправо */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 
     .photo-row {
         flex-direction: column;
         gap: 20px;
+        align-items: flex-end; /* Вирівнювання фото вправо */
     }
 
     .photo {
         height: auto; /* Автоматична висота для збереження пропорцій */
         max-width: 100%; /* Максимальна ширина 100% */
-    }
-
-    .caption-bold {
-        font-size: 1.2rem;
-        text-align: center; /* Центрування тексту */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 
     .background-photo h2 {
         font-size: 2rem;
         margin-top: -300px;
-        text-align: center; /* Центрування заголовка */
-    }
-
-    .info-box {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        left: 20px;
-        width: 90%;
-    }
-
-    .inner-box {
-        width: 100%;
-        height: 100px;
-    }
-
-    .contact-button {
-        font-size: 1.2rem;
-        padding: 10px 30px;
-        display: block; /* Відображення кнопки блочним елементом */
-        margin: 0 auto; /* Центрування кнопки */
+        text-align: right; /* Вирівнювання заголовка вправо */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 
     .background-video h2 {
         font-size: 2rem;
         margin-top: -100px;
-        text-align: center; /* Центрування заголовка */
+        text-align: right; /* Вирівнювання заголовка вправо */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 
     .background-video .description {
         font-size: 1.2rem;
         margin-top: 40px;
-        margin-left: 0;
         padding-left: 20px;
-        text-align: center; /* Центрування тексту */
+        text-align: right; /* Вирівнювання тексту вправо */
+        margin-right: 30px; /* Відступ справа на 30 пікселів */
     }
 }
-
 
 
         /* Головний екран */
