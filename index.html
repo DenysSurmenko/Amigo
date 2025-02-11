@@ -101,45 +101,60 @@
             color: #ff6347;
         }
 
-        /* Кнопка для відкриття/закриття меню на мобільних пристроях */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            z-index: 101;
-            position: fixed;
-            top: 20px;
-            right: 20px;
-        }
+/* Кнопка для відкриття/закриття меню на мобільних пристроях */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 101;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
 
-        .menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background: #fff;
-            margin: 4px 0;
-            transition: 0.4s;
-        }
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+}
 
-        /* Адаптивні стилі для меню */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
+/* Адаптивні стилі для меню */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        background: #333; /* Фон кнопки */
+        color: #fff; /* Колір тексту */
+        padding: 10px 15px; /* Внутрішні відступи */
+        border: none; /* Без рамки */
+        border-radius: 5px; /* Закруглені кути */
+    }
 
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                right: 0;
-                background: #000;
-                width: 100%;
-                text-align: center;
-            }
+    nav ul {
+        visibility: hidden; /* Сховати меню за замовчуванням */
+        height: 0; /* Висота 0 для анімації */
+        overflow: hidden; /* Сховати переповнене вміст */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        width: 100%;
+        text-align: center;
+        opacity: 0; /* Непомітне меню */
+        transform: translateY(-10px); /* Зсув для анімації */
+        transition: visibility 0s 0.5s, opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація */
+    }
 
-            nav ul.active {
-                display: flex;
-            }
+    nav ul.active {
+        visibility: visible; /* Показати меню, коли активне */
+        height: auto; /* Автоматична висота */
+        opacity: 1; /* Видиме меню */
+        transform: translateY(0); /* Повертаємо в початкову позицію */
+        transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація без затримки */
+    }
+}
 
             nav ul li {
                 margin: 10px 0;
