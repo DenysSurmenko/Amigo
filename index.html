@@ -120,7 +120,7 @@
             transition: 0.4s;
         }
 
-   /* Адаптивні стилі для меню */
+  /* Адаптивні стилі для меню */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex; /* Показати на мобільних */
@@ -172,7 +172,8 @@
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 10px 0; /* Відступи між пунктами меню */
+        text-align: center; /* Центрування пунктів меню */
     }
 
     .header-content h1 {
@@ -198,9 +199,8 @@
     }
 
     .photo {
-        height: 200px;
-        max-width: 100%; /* Максимальна ширина 100% */
         height: auto; /* Автоматична висота для збереження пропорцій */
+        max-width: 100%; /* Максимальна ширина 100% */
     }
 
     .caption-bold {
@@ -230,8 +230,6 @@
     .contact-button {
         font-size: 1.2rem;
         padding: 10px 30px;
-        left: 20px;
-        top: calc(100% - 150px);
         display: block; /* Відображення кнопки блочним елементом */
         margin: 0 auto; /* Центрування кнопки */
     }
@@ -250,6 +248,7 @@
         text-align: center; /* Центрування тексту */
     }
 }
+
 
 
         /* Головний екран */
