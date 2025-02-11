@@ -688,13 +688,15 @@
     </div>
 </section>
 
+    <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        console.log('Кнопка натиснута'); // Додайте цей рядок для перевірки
+        const menu = document.querySelector('nav ul');
+        menu.classList.toggle('active'); // Перемикаємо клас active
+    });
+</script>
+    
 <a href="#" class="back-to-top">☝</a>
- <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menu = document.querySelector('nav ul');
-            menu.classList.toggle('active'); // Перемикаємо клас active
-        });
-    </script>
 </body>
 </html>
 
