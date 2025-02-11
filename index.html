@@ -122,8 +122,14 @@
             transition: 0.4s;
         }
 
-/* Адаптивні стилі для меню */
+* Адаптивні стилі для меню */
 @media (max-width: 768px) {
+    body {
+        transform: scale(0.4225); /* Зменшення на 35% (65% від 65%) */
+        transform-origin: top left; /* Встановлення точки трансформації */
+        overflow-x: hidden; /* Сховати горизонтальне переповнення */
+    }
+
     .menu-toggle {
         display: flex; 
         flex-direction: column;
@@ -131,7 +137,7 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; 
-        font-size: 0.4225rem; /* Зменшено на 35% */
+        font-size: 0.65rem; /* Можна залишити без змін */
     }
 
     .menu-toggle.active span {
