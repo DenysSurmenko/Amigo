@@ -120,7 +120,7 @@
             transition: 0.4s;
         }
 
-      /* Адаптивні стилі для меню */
+    /* Адаптивні стилі для меню */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex; /* Показати на мобільних */
@@ -129,6 +129,10 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; /* Додано анімацію для кнопки */
+    }
+
+    .menu-toggle.active span {
+        transition: transform 0.3s ease, opacity 0.3s ease; /* Плавна анімація для всіх смужок */
     }
 
     .menu-toggle.active span:nth-child(1) {
@@ -703,13 +707,13 @@
 <a href="#" class="back-to-top">☝</a>
     
   <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            const menu = document.querySelector('nav ul');
-            const toggleButton = document.querySelector('.menu-toggle');
+       const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
 
-            menu.classList.toggle('active'); // Перемикаємо клас active
-            toggleButton.classList.toggle('active'); // Перемикаємо клас active для кнопки
-        });
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
     </script>
 </body>
 </html>
