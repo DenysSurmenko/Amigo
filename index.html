@@ -124,6 +124,13 @@
 
 /* Адаптивні стилі для меню */
 @media (max-width: 768px) {
+    body {
+        transform: scale(0.65); /* Зменшити всі елементи на 35% */
+        transform-origin: top left; /* Встановити точку трансформації */
+        overflow-x: hidden; /* Сховати горизонтальне переповнення */
+    }
+
+    /* Ваші існуючі стилі */
     .menu-toggle {
         display: flex; /* Показати на мобільних */
         flex-direction: column;
