@@ -124,42 +124,36 @@
 
 /* Адаптивні стилі для меню */
 @media (max-width: 768px) {
-    body {
-        transform: scale(0.65); /* Зменшити всі елементи на 35% */
-        transform-origin: top left; /* Встановити точку трансформації */
-        overflow-x: hidden; /* Сховати горизонтальне переповнення */
-    }
-
-    /* Ваші існуючі стилі */
     .menu-toggle {
-        display: flex; /* Показати на мобільних */
+        display: flex; 
         flex-direction: column;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: transform 0.3s ease; /* Додано анімацію для кнопки */
+        transition: transform 0.3s ease; 
+        font-size: 0.65rem; /* Зменшено */
     }
 
     .menu-toggle.active span {
-        transition: transform 0.3s ease, opacity 0.3s ease; /* Плавна анімація для всіх смужок */
+        transition: transform 0.3s ease, opacity 0.3s ease; 
     }
 
     .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); /* Верхня смужка перетворюється на верхню частину хрестика */
+        transform: rotate(45deg) translate(5px, 5px); 
     }
 
     .menu-toggle.active span:nth-child(2) {
-        opacity: 0; /* Середня смужка зникає */
+        opacity: 0; 
     }
 
     .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px); /* Нижня смужка перетворюється на нижню частину хрестика */
+        transform: rotate(-45deg) translate(5px, -5px); 
     }
 
     nav ul {
-        visibility: hidden; /* Сховати меню за замовчуванням */
-        height: 0; /* Висота 0 для анімації */
-        overflow: hidden; /* Сховати переповнене вміст */
+        visibility: hidden; 
+        height: 0; 
+        overflow: hidden; 
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -167,97 +161,96 @@
         background: #ff6347;
         width: 100%;
         text-align: center;
-        opacity: 0; /* Непомітне меню */
-        transform: translateY(-10px); /* Зсув для анімації */
-        transition: visibility 0s 0.5s, opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація */
+        opacity: 0; 
+        transform: translateY(-10px); 
+        transition: visibility 0s 0.5s, opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; 
     }
 
     nav ul.active {
-        visibility: visible; /* Показати меню, коли активне */
-        height: auto; /* Автоматична висота */
-        opacity: 1; /* Видиме меню */
-        transform: translateY(0); /* Повертаємо в початкову позицію */
-        transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; /* Плавна анімація без затримки */
+        visibility: visible; 
+        height: auto; 
+        opacity: 1; 
+        transform: translateY(0); 
+        transition: opacity 0.5s ease, height 0.5s ease, transform 0.5s ease; 
     }
 
     nav ul li {
-        margin: 8px 0; /* Відступи між пунктами меню */
-        text-align: center; /* Центрування пунктів меню */
+        margin: 5.2px 0; /* Зменшено */
+        text-align: center; 
     }
 
     .header-content h1 {
-        font-size: 0.5rem; /* Зменшено */
-        text-align: center; /* Центрування заголовка */
+        font-size: 0.325rem; /* Зменшено */
+        text-align: center; 
     }
 
     .cta-button {
-        font-size: 1rem; /* Зменшено */
-        padding: 8px 24px; /* Зменшено */
-        display: block; /* Відображення кнопки блочним елементом */
-        margin: 0 auto; /* Центрування кнопки */
+        font-size: 0.65rem; /* Зменшено */
+        padding: 5.2px 15.6px; /* Зменшено */
+        display: block; 
+        margin: 0 auto; 
     }
 
     .services-block h2 {
-        font-size: 0.5rem; /* Зменшено */
-        text-align: center; /* Центрування заголовка */
+        font-size: 0.325rem; /* Зменшено */
+        text-align: center; 
     }
 
     .photo-row {
         flex-direction: column;
-        gap: 8px; /* Зменшено */
+        gap: 5.2px; /* Зменшено */
     }
 
     .photo {
-        height: auto; /* Автоматична висота для збереження пропорцій */
-        max-width: 100%; /* Максимальна ширина 100% */
+        height: auto; 
+        max-width: 100%; 
     }
 
     .caption-bold {
-        font-size: 0.5rem; /* Зменшено */
-        text-align: center; /* Центрування тексту */
+        font-size: 0.325rem; /* Зменшено */
+        text-align: center; 
     }
 
     .background-photo h2 {
-        font-size: 0.2rem; /* Зменшено */
-        margin-top: -300px;
-        text-align: center; /* Центрування заголовка */
+        font-size: 0.13rem; /* Зменшено */
+        margin-top: -195px; /* Зменшено */
+        text-align: center; 
     }
 
     .info-box {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        left: 8px; /* Зменшено */
-        width: 40%; /* Зменшено */
+        left: 5.2px; /* Зменшено */
+        width: 26%; /* Зменшено */
     }
 
     .inner-box {
         width: 100%;
-        height: 80px; /* Зменшено */
+        height: 52px; /* Зменшено */
     }
 
     .contact-button {
-        font-size: 1rem; /* Зменшено */
-        padding: 8px 24px; /* Зменшено */
-        display: block; /* Відображення кнопки блочним елементом */
-        margin: 0 auto; /* Центрування кнопки */
+        font-size: 0.65rem; /* Зменшено */
+        padding: 5.2px 15.6px; /* Зменшено */
+        display: block; 
+        margin: 0 auto; 
     }
 
     .background-video h2 {
-        font-size: 0.2rem; /* Зменшено */
-        margin-top: -100px;
-        text-align: left; /* Центрування заголовка */
+        font-size: 0.13rem; /* Зменшено */
+        margin-top: -65px; /* Зменшено */
+        text-align: left; 
     }
 
     .background-video .description {
-        font-size: 1rem; /* Зменшено */
-        margin-top: 30px; /* Зменшено */
+        font-size: 0.65rem; /* Зменшено */
+        margin-top: 19.5px; /* Зменшено */
         margin-left: 0;
-        padding-left: 48px; /* Зменшено */
-        text-align: left; /* Центрування тексту */
+        padding-left: 31.2px; /* Зменшено */
+        text-align: left; 
     }
 }
-
         /* Головний екран */
         header {
             position: relative;
