@@ -122,12 +122,13 @@
             transition: 0.4s;
         }
 
-* Адаптивні стилі для меню */
+/* Адаптивні стилі для меню */
 @media (max-width: 768px) {
     body {
-        transform: scale(0.4225); /* Зменшення на 35% (65% від 65%) */
+        transform: scale(0.65); /* Зменшення на 35% */
         transform-origin: top left; /* Встановлення точки трансформації */
         overflow-x: hidden; /* Сховати горизонтальне переповнення */
+        width: 153.846%; /* Збільшення ширини для коректного відображення */
     }
 
     .menu-toggle {
@@ -137,7 +138,7 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; 
-        font-size: 0.65rem; /* Можна залишити без змін */
+        font-size: 0.65rem; /* Залишити без змін */
     }
 
     .menu-toggle.active span {
@@ -198,28 +199,24 @@
     }
 
     .services-block h2 {
-        font-size: 0.211875rem; /* Зменшено на 35% */
+        font-size: 0.1375rem; /* Зменшено на 35% */
         text-align: center; 
+        margin-bottom: 5px; /* Відступ знизу */
     }
 
     .photo-row {
-        flex-direction: column;
+        display: flex;
+        flex-direction: column; /* Відображення фотографій один під одним */
         gap: 3.38px; /* Зменшено на 35% */
     }
 
     .photo {
+        width: 100%; /* Ширина фотографії на 100% */
         height: auto; 
-        max-width: 100%; 
     }
 
     .caption-bold {
         font-size: 0.211875rem; /* Зменшено на 35% */
-        text-align: center; 
-    }
-
-    .background-photo h2 {
-        font-size: 0.084375rem; /* Зменшено на 35% */
-        margin-top: -126.75px; /* Зменшено на 35% */
         text-align: center; 
     }
 
@@ -257,6 +254,7 @@
         text-align: left; 
     }
 }
+
 
         /* Головний екран */
         header {
