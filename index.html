@@ -122,15 +122,15 @@
             transition: 0.4s;
         }
 
+/* Загальні стилі для блокування горизонтального прокручування та збільшення сторінки */
+body {
+    overflow-x: hidden; /* Сховати горизонтальне переповнення */
+    transform: scale(1.1); /* Збільшення на 10% */
+    transform-origin: top left; /* Встановлення точки трансформації */
+}
+
 /* Адаптивні стилі для меню */
 @media (max-width: 768px) {
-    body {
-        transform: scale(0.65); /* Зменшення на 35% */
-        transform-origin: top left; /* Встановлення точки трансформації */
-        overflow-x: hidden; /* Сховати горизонтальне переповнення */
-        width: 153.846%; /* Збільшення ширини для коректного відображення */
-    }
-
     .menu-toggle {
         display: flex; 
         flex-direction: column;
@@ -139,22 +139,6 @@
         cursor: pointer;
         transition: transform 0.3s ease; 
         font-size: 0.65rem; /* Залишити без змін */
-    }
-
-    .menu-toggle.active span {
-        transition: transform 0.3s ease, opacity 0.3s ease; 
-    }
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px); 
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0; 
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px); 
     }
 
     nav ul {
@@ -254,7 +238,6 @@
         text-align: left; 
     }
 }
-
 
         /* Головний екран */
         header {
