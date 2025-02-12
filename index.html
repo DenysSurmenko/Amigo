@@ -125,10 +125,11 @@
 /* Адаптивні стилі для мобільних пристроїв */
 @media (max-width: 768px) {
     body {
-    overflow-x: hidden; /* Сховати горизонтальне переповнення */
     transform: scale(1); /* Відновлення масштабу для мобільних */
+    overflow-x: hidden; /* Сховати горизонтальне переповнення */
     margin: 0;
     padding: 0;
+    position: relative; /* Додано для позиціонування фону */
 }
 
     .menu-toggle {
@@ -244,12 +245,13 @@
     }
 
     video {
-        max-width: 100%; /* Максимальна ширина відео на 100% */
-        height: auto; /* Автоматична висота */
-        display: block; /* Блочний елемент */
-        margin: 0 auto; /* Центрування */
-    }
+    max-width: none; /* Вимкнено обмеження ширини */
+    height: auto; /* Автоматична висота */
+    display: block; /* Блочний елемент */
+    margin: 0 auto; /* Центрування */
 }
+}
+        
         /* Головний екран */
         header {
             position: relative;
