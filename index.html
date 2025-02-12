@@ -122,15 +122,16 @@
             transition: 0.4s;
         }
 
-/* Загальні стилі для блокування горизонтального прокручування та збільшення сторінки */
-body {
+/* Адаптивні стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    body {
     overflow-x: hidden; /* Сховати горизонтальне переповнення */
-    transform: scale(1.1); /* Збільшення на 10% */
+    transform: scale(1); /* Збільшення на 10% */
     transform-origin: top left; /* Встановлення точки трансформації */
+    margin: 0;
+    padding: 0;
 }
 
-/* Адаптивні стилі для меню */
-@media (max-width: 768px) {
     .menu-toggle {
         display: flex; 
         flex-direction: column;
@@ -138,7 +139,7 @@ body {
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; 
-        font-size: 0.65rem; /* Залишити без змін */
+        font-size: 1.2rem; /* Збільшення шрифту для зручності */
     }
 
     nav ul {
@@ -166,32 +167,32 @@ body {
     }
 
     nav ul li {
-        margin: 3.4px 0; /* Зменшено на 35% */
+        margin: 10px 0; /* Збільшення відступів для зручності */
         text-align: center; 
     }
 
     .header-content h1 {
-        font-size: 0.211875rem; /* Зменшено на 35% */
+        font-size: 1.5rem; /* Збільшення шрифту заголовка */
         text-align: center; 
     }
 
     .cta-button {
-        font-size: 0.4225rem; /* Зменшено на 35% */
-        padding: 3.38px 10.14px; /* Зменшено на 35% */
+        font-size: 1.2rem; /* Збільшення шрифту кнопки */
+        padding: 10px 20px; /* Збільшення відступів */
         display: block; 
         margin: 0 auto; 
     }
 
     .services-block h2 {
-        font-size: 0.1375rem; /* Зменшено на 35% */
+        font-size: 1.2rem; /* Збільшення шрифту для заголовків послуг */
         text-align: center; 
-        margin-bottom: 5px; /* Відступ знизу */
+        margin-bottom: 10px; /* Відступ знизу */
     }
 
     .photo-row {
         display: flex;
         flex-direction: column; /* Відображення фотографій один під одним */
-        gap: 3.38px; /* Зменшено на 35% */
+        gap: 10px; /* Збільшення відстані між фотографіями */
     }
 
     .photo {
@@ -200,7 +201,7 @@ body {
     }
 
     .caption-bold {
-        font-size: 0.211875rem; /* Зменшено на 35% */
+        font-size: 1rem; /* Збільшення шрифту підпису */
         text-align: center; 
     }
 
@@ -208,33 +209,33 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        left: 3.38px; /* Зменшено на 35% */
-        width: 16.9%; /* Зменшено на 35% */
+        left: 0; /* Вирівнювання зліва */
+        width: 100%; /* Ширина на 100% */
     }
 
     .inner-box {
         width: 100%;
-        height: 33.8px; /* Зменшено на 35% */
+        height: auto; /* Автоматична висота */
     }
 
     .contact-button {
-        font-size: 0.4225rem; /* Зменшено на 35% */
-        padding: 3.38px 10.14px; /* Зменшено на 35% */
+        font-size: 1.2rem; /* Збільшення шрифту кнопки контакту */
+        padding: 10px 20px; /* Збільшення відступів */
         display: block; 
         margin: 0 auto; 
     }
 
     .background-video h2 {
-        font-size: 0.084375rem; /* Зменшено на 35% */
-        margin-top: -42.25px; /* Зменшено на 35% */
+        font-size: 1.2rem; /* Збільшення шрифту заголовка */
+        margin-top: 10px; /* Відступ зверху */
         text-align: left; 
     }
 
     .background-video .description {
-        font-size: 0.4225rem; /* Зменшено на 35% */
-        margin-top: 12.675px; /* Зменшено на 35% */
+        font-size: 1rem; /* Збільшення шрифту опису */
+        margin-top: 10px; /* Відступ зверху */
         margin-left: 0;
-        padding-left: 20.28px; /* Зменшено на 35% */
+        padding-left: 0; /* Відключення відступу зліва */
         text-align: left; 
     }
 }
