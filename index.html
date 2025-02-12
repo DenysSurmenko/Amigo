@@ -126,8 +126,7 @@
 @media (max-width: 768px) {
     body {
     overflow-x: hidden; /* Сховати горизонтальне переповнення */
-    transform: scale(1); /* Збільшення на 10% */
-    transform-origin: top left; /* Встановлення точки трансформації */
+    transform: scale(1); /* Відновлення масштабу для мобільних */
     margin: 0;
     padding: 0;
 }
@@ -139,7 +138,7 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; 
-        font-size: 1.2rem; /* Збільшення шрифту для зручності */
+        font-size: 1rem; /* Зменшено шрифт для зручності */
     }
 
     nav ul {
@@ -167,32 +166,32 @@
     }
 
     nav ul li {
-        margin: 10px 0; /* Збільшення відступів для зручності */
+        margin: 8px 0; /* Зменшено відступи для зручності */
         text-align: center; 
     }
 
     .header-content h1 {
-        font-size: 1.5rem; /* Збільшення шрифту заголовка */
+        font-size: 1.2rem; /* Зменшено шрифт заголовка */
         text-align: center; 
     }
 
     .cta-button {
-        font-size: 1.2rem; /* Збільшення шрифту кнопки */
-        padding: 10px 20px; /* Збільшення відступів */
+        font-size: 1rem; /* Зменшено шрифт кнопки */
+        padding: 8px 16px; /* Зменшено відступи */
         display: block; 
         margin: 0 auto; 
     }
 
     .services-block h2 {
-        font-size: 1.2rem; /* Збільшення шрифту для заголовків послуг */
+        font-size: 1rem; /* Зменшено шрифт для заголовків послуг */
         text-align: center; 
-        margin-bottom: 10px; /* Відступ знизу */
+        margin-bottom: 8px; /* Зменшено відступ знизу */
     }
 
     .photo-row {
         display: flex;
         flex-direction: column; /* Відображення фотографій один під одним */
-        gap: 10px; /* Збільшення відстані між фотографіями */
+        gap: 8px; /* Зменшено відстань між фотографіями */
     }
 
     .photo {
@@ -201,7 +200,7 @@
     }
 
     .caption-bold {
-        font-size: 1rem; /* Збільшення шрифту підпису */
+        font-size: 0.9rem; /* Зменшено шрифт підпису */
         text-align: center; 
     }
 
@@ -219,27 +218,38 @@
     }
 
     .contact-button {
-        font-size: 1.2rem; /* Збільшення шрифту кнопки контакту */
-        padding: 10px 20px; /* Збільшення відступів */
+        font-size: 1rem; /* Зменшено шрифт кнопки контакту */
+        padding: 8px 16px; /* Зменшено відступи */
         display: block; 
         margin: 0 auto; 
     }
 
+    .background-video {
+        display: flex; /* Вирівнювання контейнера */
+        justify-content: center; /* Центрування */
+        align-items: center; /* Центрування по вертикалі */
+    }
+
     .background-video h2 {
-        font-size: 1.2rem; /* Збільшення шрифту заголовка */
+        font-size: 1rem; /* Зменшено шрифт заголовка */
         margin-top: 10px; /* Відступ зверху */
-        text-align: left; 
+        text-align: center; 
     }
 
     .background-video .description {
-        font-size: 1rem; /* Збільшення шрифту опису */
+        font-size: 0.9rem; /* Зменшено шрифт опису */
         margin-top: 10px; /* Відступ зверху */
-        margin-left: 0;
         padding-left: 0; /* Відключення відступу зліва */
-        text-align: left; 
+        text-align: center; /* Центрування тексту */
+    }
+
+    video {
+        max-width: 100%; /* Максимальна ширина відео на 100% */
+        height: auto; /* Автоматична висота */
+        display: block; /* Блочний елемент */
+        margin: 0 auto; /* Центрування */
     }
 }
-
         /* Головний екран */
         header {
             position: relative;
