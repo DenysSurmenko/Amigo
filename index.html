@@ -122,15 +122,19 @@
             transition: 0.4s;
         }
 
-/* Адаптивні стилі для мобільних пристроїв */
 @media (max-width: 768px) {
     body {
-    transform: scale(1); /* Відновлення масштабу для мобільних */
-    overflow-x: hidden; /* Сховати горизонтальне переповнення */
-    margin: 0;
-    padding: 0;
-    position: relative; /* Додано для позиціонування фону */
-}
+        font-size: 60%; /* Зменшення розміру шрифту на 40% */
+    }
+
+    /* Інші стилі для мобільних пристроїв */
+    body {
+        transform: scale(1); 
+        overflow-x: hidden; 
+        margin: 0;
+        padding: 0;
+        position: relative; 
+    }
 
     .menu-toggle {
         display: flex; 
@@ -139,7 +143,7 @@
         align-items: center;
         cursor: pointer;
         transition: transform 0.3s ease; 
-        font-size: 1rem; /* Зменшено шрифт для зручності */
+        font-size: 1rem; 
     }
 
     nav ul {
@@ -167,41 +171,41 @@
     }
 
     nav ul li {
-        margin: 8px 0; /* Зменшено відступи для зручності */
+        margin: 8px 0; 
         text-align: center; 
     }
 
     .header-content h1 {
-        font-size: 1.2rem; /* Зменшено шрифт заголовка */
+        font-size: 1.2rem; 
         text-align: center; 
     }
 
     .cta-button {
-        font-size: 1rem; /* Зменшено шрифт кнопки */
-        padding: 8px 16px; /* Зменшено відступи */
+        font-size: 1rem; 
+        padding: 8px 16px; 
         display: block; 
         margin: 0 auto; 
     }
 
     .services-block h2 {
-        font-size: 1rem; /* Зменшено шрифт для заголовків послуг */
+        font-size: 1rem; 
         text-align: center; 
-        margin-bottom: 8px; /* Зменшено відступ знизу */
+        margin-bottom: 8px; 
     }
 
     .photo-row {
         display: flex;
-        flex-direction: column; /* Відображення фотографій один під одним */
-        gap: 8px; /* Зменшено відстань між фотографіями */
+        flex-direction: column; 
+        gap: 8px; 
     }
 
     .photo {
-        width: 100%; /* Ширина фотографії на 100% */
+        width: 100%; 
         height: auto; 
     }
 
     .caption-bold {
-        font-size: 0.9rem; /* Зменшено шрифт підпису */
+        font-size: 0.9rem; 
         text-align: center; 
     }
 
@@ -209,48 +213,60 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        left: 0; /* Вирівнювання зліва */
-        width: 100%; /* Ширина на 100% */
+        left: 0; 
+        width: 100%; 
     }
 
     .inner-box {
         width: 100%;
-        height: auto; /* Автоматична висота */
+        height: auto; 
     }
 
     .contact-button {
-        font-size: 1rem; /* Зменшено шрифт кнопки контакту */
-        padding: 8px 16px; /* Зменшено відступи */
+        font-size: 1rem; 
+        padding: 8px 16px; 
         display: block; 
         margin: 0 auto; 
     }
 
+    /* Стилі для відео на фоні */
     .background-video {
-        display: flex; /* Вирівнювання контейнера */
-        justify-content: center; /* Центрування */
-        align-items: center; /* Центрування по вертикалі */
+        position: relative;
+        width: 100%;
+        height: 50vh; /* Зменшена висота для мобільних пристроїв */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .background-video video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto; /* Автоматична висота для збереження пропорцій */
+        object-fit: cover; /* Забезпечує коректне масштабування відео */
+        transform: translate(-50%, -50%);
+        z-index: -1; /* Відео на задньому плані */
+    }
+
+    .background-video .content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: white;
     }
 
     .background-video h2 {
-        font-size: 1rem; /* Зменшено шрифт заголовка */
-        margin-top: 10px; /* Відступ зверху */
-        text-align: center; 
+        font-size: 1.5rem; /* Зменшений розмір заголовка */
     }
 
     .background-video .description {
-        font-size: 0.9rem; /* Зменшено шрифт опису */
-        margin-top: 10px; /* Відступ зверху */
-        padding-left: 0; /* Відключення відступу зліва */
-        text-align: center; /* Центрування тексту */
+        font-size: 1rem; /* Зменшений розмір опису */
     }
+}
 
-    video {
-    max-width: none; /* Вимкнено обмеження ширини */
-    height: auto; /* Автоматична висота */
-    display: block; /* Блочний елемент */
-    margin: 0 auto; /* Центрування */
-}
-}
         
         /* Головний екран */
         header {
